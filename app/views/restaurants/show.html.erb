@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="card">
+    <img src="https://images.pexels.com/photos/62097/pexels-photo-62097.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" class="card-img-top" alt="restaurant">
+    <div class="card-body">
+      <h5 class="card-title"><%= @restaurant.name %></h5>
+      <p class="card-text"><%= @restaurant.address %></p>
+      <p class="card-text"><%= @restaurant.phone_number %></p>
+      <p class="card-text"><small class="text-muted"><%= @restaurant.category %></small></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <p><%= link_to "Back to list", restaurants_path %></p>
+  </div>
+
+  <div class="row">
+    <p><%= link_to "+ Add a review", new_restaurant_review_path(@restaurant) %></p>
+  </div>
+</div>
